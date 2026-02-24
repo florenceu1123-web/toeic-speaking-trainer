@@ -20,8 +20,8 @@ export default function Recorder({ onTranscriptChange, onAudioReady, onAudioBlob
   const chunksRef = useRef<Blob[]>([])
   const finalTranscriptRef = useRef('')
   const streamRef = useRef<MediaStream | null>(null)
+  const isActiveRef = useRef(false) // recognition 재시작 여부 제어
 
-  // Start when active prop changes to true
   useEffect(() => {
     if (active) {
       startRecording()
@@ -31,13 +31,7 @@ export default function Recorder({ onTranscriptChange, onAudioReady, onAudioBlob
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [active])
 
-  function startRecording() {
-    setTranscript('')
-    setAudioUrl(null)
-    setError(null)
-    finalTranscriptRef.current = ''
-
-    // 1. Web Speech API for STT
+  function startRecognition(stream: MediaStream) {
     const SR = window.SpeechRecognition || window.webkitSpeechRecognition
     if (!SR) {
       setError('이 브라우저는 음성 인식을 지원하지 않습니다. Chrome을 사용해 주세요.')
@@ -48,6 +42,7 @@ export default function Recorder({ onTranscriptChange, onAudioReady, onAudioBlob
     recognition.lang = 'en-US'
     recognition.continuous = true
     recognition.interimResults = true
+    recognition.maxAlternatives = 1
 
     recognition.onresult = (event: SpeechRecognitionEvent) => {
       let interim = ''
@@ -68,20 +63,49 @@ export default function Recorder({ onTranscriptChange, onAudioReady, onAudioBlob
     }
 
     recognition.onerror = (e: SpeechRecognitionErrorEvent) => {
-      if (e.error !== 'no-speech') {
-        setError(`음성 인식 오류: ${e.error}`)
+      if (e.error === 'not-allowed') {
+        setError('마이크 접근 권한이 거부되었습니다. 브라우저 설정에서 허용해 주세요.')
+        isActiveRef.current = false
+      }
+      // no-speech, network 등은 onend에서 자동 재시작
+    }
+
+    // Chrome은 연속 인식 중에도 onend가 발생함 → 재시작 처리
+    recognition.onend = () => {
+      if (isActiveRef.current) {
+        try {
+          recognition.start()
+        } catch {
+          // 이미 시작 중이면 무시
+        }
       }
     }
 
-    recognition.start()
-    recognitionRef.current = recognition
-    setIsListening(true)
+    try {
+      recognition.start()
+      recognitionRef.current = recognition
+      setIsListening(true)
+    } catch {
+      setError('음성 인식을 시작할 수 없습니다.')
+    }
 
-    // 2. MediaRecorder for audio playback
+    // stream 파라미터는 향후 확장용 (현재 Web Speech API는 스트림 직접 주입 불가)
+    void stream
+  }
+
+  function startRecording() {
+    setTranscript('')
+    setAudioUrl(null)
+    setError(null)
+    finalTranscriptRef.current = ''
+    isActiveRef.current = true
+
     navigator.mediaDevices
       .getUserMedia({ audio: true })
       .then((stream) => {
         streamRef.current = stream
+
+        // MediaRecorder 시작
         chunksRef.current = []
         const mr = new MediaRecorder(stream)
         mr.ondataavailable = (e) => {
@@ -96,13 +120,19 @@ export default function Recorder({ onTranscriptChange, onAudioReady, onAudioBlob
         }
         mr.start()
         mediaRecorderRef.current = mr
+
+        // 마이크 권한 확보 후 Web Speech 시작
+        startRecognition(stream)
       })
       .catch(() => {
         setError('마이크 접근 권한이 필요합니다.')
+        isActiveRef.current = false
       })
   }
 
   function stopRecording() {
+    isActiveRef.current = false
+
     recognitionRef.current?.stop()
     recognitionRef.current = null
 
