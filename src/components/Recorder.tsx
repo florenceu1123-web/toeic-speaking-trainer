@@ -5,10 +5,11 @@ import { useEffect, useRef, useState } from 'react'
 interface RecorderProps {
   onTranscriptChange: (text: string) => void
   onAudioReady: (url: string) => void
+  onAudioBlobReady?: (blob: Blob) => void
   active: boolean
 }
 
-export default function Recorder({ onTranscriptChange, onAudioReady, active }: RecorderProps) {
+export default function Recorder({ onTranscriptChange, onAudioReady, onAudioBlobReady, active }: RecorderProps) {
   const [isListening, setIsListening] = useState(false)
   const [transcript, setTranscript] = useState('')
   const [audioUrl, setAudioUrl] = useState<string | null>(null)
@@ -91,6 +92,7 @@ export default function Recorder({ onTranscriptChange, onAudioReady, active }: R
           const url = URL.createObjectURL(blob)
           setAudioUrl(url)
           onAudioReady(url)
+          onAudioBlobReady?.(blob)
         }
         mr.start()
         mediaRecorderRef.current = mr

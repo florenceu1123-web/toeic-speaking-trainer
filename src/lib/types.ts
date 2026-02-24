@@ -11,8 +11,9 @@ export interface Question {
   prepTime: number   // seconds
   answerTime: number // seconds
   prompt: string
-  passage?: string        // read_aloud: text to read
+  passage?: string          // read_aloud: text to read
   imageDescription?: string // describe_picture: scene description
+  imageUrl?: string         // describe_picture: actual photo URL
   difficulty: 'easy' | 'medium' | 'hard'
   tags: string[]
 }

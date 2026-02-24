@@ -65,10 +65,10 @@ const ALL_QUESTIONS: Question[] = [
     prepTime: 30,
     answerTime: 45,
     prompt: 'Describe the picture in as much detail as possible.',
-    imageDescription:
-      '[Scene: A busy outdoor farmer\'s market. Colorful fruit and vegetable stalls line both sides. A vendor in an apron is handing a paper bag to a smiling customer. People of various ages browse the stalls. String lights hang overhead. A wooden sign reads "Fresh from the Farm."]',
+    imageUrl: 'https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=800&q=80',
+    imageDescription: '',
     difficulty: 'easy',
-    tags: ['market', 'outdoor', 'people'],
+    tags: ['cafe', 'indoor', 'people'],
   },
   {
     id: 'dp_02',
@@ -76,10 +76,10 @@ const ALL_QUESTIONS: Question[] = [
     prepTime: 30,
     answerTime: 45,
     prompt: 'Describe the picture in as much detail as possible.',
-    imageDescription:
-      '[Scene: A modern open-plan office. Several employees sit at standing desks with large monitors. Two colleagues are collaborating at a whiteboard covered with diagrams. Large windows show a city skyline. A coffee station is visible in the corner. Plants are placed around the room.]',
+    imageUrl: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80',
+    imageDescription: '',
     difficulty: 'medium',
-    tags: ['office', 'work', 'indoor'],
+    tags: ['office', 'work', 'people'],
   },
   {
     id: 'dp_03',
@@ -87,10 +87,10 @@ const ALL_QUESTIONS: Question[] = [
     prepTime: 30,
     answerTime: 45,
     prompt: 'Describe the picture in as much detail as possible.',
-    imageDescription:
-      '[Scene: A crowded airport departure hall. Travelers with suitcases wait in check-in queues. Departure boards display flight information. A family takes a selfie near the entrance. Security personnel stand at checkpoints. Large digital advertisements line the walls.]',
+    imageUrl: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80',
+    imageDescription: '',
     difficulty: 'medium',
-    tags: ['airport', 'travel', 'crowd'],
+    tags: ['airport', 'travel', 'people'],
   },
   {
     id: 'dp_04',
@@ -98,10 +98,10 @@ const ALL_QUESTIONS: Question[] = [
     prepTime: 30,
     answerTime: 45,
     prompt: 'Describe the picture in as much detail as possible.',
-    imageDescription:
-      '[Scene: A university lecture hall. A professor stands at the front pointing to a projected slide showing a bar graph. About 30 students sit in tiered rows, some taking notes, others using laptops. A clock on the wall shows 10:15. Natural light streams through side windows.]',
+    imageUrl: 'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=800&q=80',
+    imageDescription: '',
     difficulty: 'medium',
-    tags: ['education', 'university', 'indoor'],
+    tags: ['education', 'students', 'people'],
   },
   {
     id: 'dp_05',
@@ -109,10 +109,10 @@ const ALL_QUESTIONS: Question[] = [
     prepTime: 30,
     answerTime: 45,
     prompt: 'Describe the picture in as much detail as possible.',
-    imageDescription:
-      '[Scene: A hospital corridor. A doctor in a white coat walks alongside a patient in a wheelchair. A nurse at the reception desk speaks on the phone. Medical equipment is stored along one wall. Signs point to various departments. The floor is shiny and well-lit.]',
+    imageUrl: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80',
+    imageDescription: '',
     difficulty: 'hard',
-    tags: ['hospital', 'healthcare', 'indoor'],
+    tags: ['hospital', 'healthcare', 'people'],
   },
   {
     id: 'dp_06',
@@ -120,10 +120,10 @@ const ALL_QUESTIONS: Question[] = [
     prepTime: 30,
     answerTime: 45,
     prompt: 'Describe the picture in as much detail as possible.',
-    imageDescription:
-      '[Scene: A busy restaurant kitchen. Two chefs in white uniforms are plating dishes. Steam rises from pots on a large stove. A sous chef chops vegetables at a prep station. Pots and pans hang from ceiling racks. A timer beeps in the background.]',
+    imageUrl: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80',
+    imageDescription: '',
     difficulty: 'medium',
-    tags: ['restaurant', 'kitchen', 'food'],
+    tags: ['restaurant', 'dining', 'people'],
   },
   {
     id: 'dp_07',
@@ -131,10 +131,10 @@ const ALL_QUESTIONS: Question[] = [
     prepTime: 30,
     answerTime: 45,
     prompt: 'Describe the picture in as much detail as possible.',
-    imageDescription:
-      '[Scene: A public park on a sunny afternoon. Joggers run along a paved path. Families picnic on the grass. Children play on a colorful playground. A dog chases a frisbee. Trees provide shade. A fountain is visible in the background. People sit on benches reading.]',
+    imageUrl: 'https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=800&q=80',
+    imageDescription: '',
     difficulty: 'easy',
-    tags: ['park', 'outdoor', 'leisure'],
+    tags: ['park', 'outdoor', 'people'],
   },
   {
     id: 'dp_08',
@@ -142,10 +142,10 @@ const ALL_QUESTIONS: Question[] = [
     prepTime: 30,
     answerTime: 45,
     prompt: 'Describe the picture in as much detail as possible.',
-    imageDescription:
-      '[Scene: A construction site. Workers wearing hard hats and safety vests operate machinery. A crane lifts steel beams. Blueprints are spread on a table where two engineers consult them. Scaffolding covers the side of a partially built high-rise. Trucks deliver materials.]',
+    imageUrl: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80',
+    imageDescription: '',
     difficulty: 'hard',
-    tags: ['construction', 'work', 'outdoor'],
+    tags: ['construction', 'work', 'people'],
   },
   {
     id: 'dp_09',
@@ -153,10 +153,10 @@ const ALL_QUESTIONS: Question[] = [
     prepTime: 30,
     answerTime: 45,
     prompt: 'Describe the picture in as much detail as possible.',
-    imageDescription:
-      '[Scene: A supermarket checkout area. A cashier scans items for a customer. A conveyor belt holds groceries including fresh produce, bread, and beverages. A child helps place items on the belt. Other shoppers wait in adjacent lines. Promotional signs hang above the lanes.]',
+    imageUrl: 'https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?auto=format&fit=crop&w=800&q=80',
+    imageDescription: '',
     difficulty: 'easy',
-    tags: ['shopping', 'indoor', 'daily life'],
+    tags: ['shopping', 'indoor', 'people'],
   },
   {
     id: 'dp_10',
@@ -164,10 +164,10 @@ const ALL_QUESTIONS: Question[] = [
     prepTime: 30,
     answerTime: 45,
     prompt: 'Describe the picture in as much detail as possible.',
-    imageDescription:
-      '[Scene: A conference room during a business meeting. Six professionals sit around an oval table with laptops and documents. A presenter stands at the head of the table, gesturing toward a projected chart. Coffee cups and water glasses are on the table. The atmosphere appears serious and focused.]',
+    imageUrl: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80',
+    imageDescription: '',
     difficulty: 'medium',
-    tags: ['business', 'meeting', 'indoor'],
+    tags: ['business', 'meeting', 'people'],
   },
 
   // ── Task 4-6: Respond to Questions ───────────────────────────────

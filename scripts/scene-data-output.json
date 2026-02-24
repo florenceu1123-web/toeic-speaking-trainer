@@ -1,0 +1,52 @@
+[
+  {
+    "id": "dp_01",
+    "imageUrl": "https://image.pollinations.ai/prompt/outdoor%20farmers%20market%2C%20vendor%20in%20apron%20handing%20paper%20bag%20to%20smiling%20customer%2C%20colorful%20fruit%20vegetable%20stalls%2C%20people%20browsing%2C%20string%20lights%20overhead%2C%20daytime%2C%20photorealistic?width=800&height=500&seed=101&nologo=true",
+    "description": "(분석 실패 - 수동 입력 필요)"
+  },
+  {
+    "id": "dp_02",
+    "imageUrl": "https://image.pollinations.ai/prompt/modern%20open%20plan%20office%2C%20employees%20at%20standing%20desks%20with%20large%20monitors%2C%20two%20colleagues%20writing%20on%20whiteboard%20with%20diagrams%2C%20city%20skyline%20through%20large%20windows%2C%20plants%2C%20coffee%20station%2C%20photorealistic?width=800&height=500&seed=102&nologo=true",
+    "description": "(분석 실패 - 수동 입력 필요)"
+  },
+  {
+    "id": "dp_03",
+    "imageUrl": "https://image.pollinations.ai/prompt/busy%20airport%20departure%20hall%2C%20travelers%20with%20suitcases%20in%20check-in%20queue%2C%20departure%20boards%20showing%20flight%20info%2C%20family%20taking%20selfie%2C%20security%20personnel%2C%20digital%20advertisements%20on%20walls%2C%20photorealistic?width=800&height=500&seed=103&nologo=true",
+    "description": "(분석 실패 - 수동 입력 필요)"
+  },
+  {
+    "id": "dp_04",
+    "imageUrl": "https://image.pollinations.ai/prompt/university%20lecture%20hall%2C%20professor%20pointing%20at%20projected%20bar%20graph%20slide%2C%2030%20students%20in%20tiered%20rows%20taking%20notes%20and%20using%20laptops%2C%20clock%20on%20wall%2C%20natural%20light%20from%20side%20windows%2C%20photorealistic?width=800&height=500&seed=104&nologo=true",
+    "description": "(분석 실패 - 수동 입력 필요)"
+  },
+  {
+    "id": "dp_05",
+    "imageUrl": "https://image.pollinations.ai/prompt/hospital%20corridor%2C%20doctor%20in%20white%20coat%20walking%20alongside%20patient%20in%20wheelchair%2C%20nurse%20at%20reception%20desk%20on%20phone%2C%20medical%20equipment%20along%20wall%2C%20department%20signs%2C%20shiny%20floor%20bright%20lighting%2C%20photorealistic?width=800&height=500&seed=105&nologo=true",
+    "description": "(분석 실패 - 수동 입력 필요)"
+  },
+  {
+    "id": "dp_06",
+    "imageUrl": "https://image.pollinations.ai/prompt/busy%20restaurant%20kitchen%2C%20two%20chefs%20in%20white%20uniforms%20plating%20dishes%2C%20steam%20rising%20from%20pots%20on%20stove%2C%20sous%20chef%20chopping%20vegetables%20at%20prep%20station%2C%20pots%20pans%20hanging%20from%20ceiling%20racks%2C%20photorealistic?width=800&height=500&seed=106&nologo=true",
+    "description": "(분석 실패 - 수동 입력 필요)"
+  },
+  {
+    "id": "dp_07",
+    "imageUrl": "https://image.pollinations.ai/prompt/public%20park%20sunny%20afternoon%2C%20joggers%20on%20paved%20path%2C%20families%20picnicking%20on%20grass%2C%20children%20on%20colorful%20playground%2C%20dog%20chasing%20frisbee%2C%20trees%20providing%20shade%2C%20fountain%20in%20background%2C%20people%20on%20benches%20reading%2C%20photorealistic?width=800&height=500&seed=107&nologo=true",
+    "description": "(분석 실패 - 수동 입력 필요)"
+  },
+  {
+    "id": "dp_08",
+    "imageUrl": "https://image.pollinations.ai/prompt/construction%20site%2C%20workers%20wearing%20hard%20hats%20safety%20vests%20operating%20machinery%2C%20crane%20lifting%20steel%20beams%2C%20two%20engineers%20consulting%20blueprints%20at%20table%2C%20scaffolding%20on%20partly%20built%20high-rise%2C%20trucks%20delivering%20materials%2C%20photorealistic?width=800&height=500&seed=108&nologo=true",
+    "description": "(분석 실패 - 수동 입력 필요)"
+  },
+  {
+    "id": "dp_09",
+    "imageUrl": "https://image.pollinations.ai/prompt/supermarket%20checkout%20area%2C%20cashier%20scanning%20items%2C%20customer%20at%20conveyor%20belt%20with%20fresh%20produce%20bread%20beverages%2C%20child%20helping%20place%20items%2C%20other%20shoppers%20waiting%20in%20adjacent%20lanes%2C%20promotional%20signs%20above%2C%20photorealistic?width=800&height=500&seed=109&nologo=true",
+    "description": "(분석 실패 - 수동 입력 필요)"
+  },
+  {
+    "id": "dp_10",
+    "imageUrl": "https://image.pollinations.ai/prompt/conference%20room%20business%20meeting%2C%20six%20professionals%20around%20oval%20table%20with%20laptops%20and%20documents%2C%20presenter%20standing%20at%20head%20of%20table%20gesturing%20at%20projected%20chart%2C%20coffee%20cups%20water%20glasses%20on%20table%2C%20serious%20focused%20atmosphere%2C%20photorealistic?width=800&height=500&seed=110&nologo=true",
+    "description": "(분석 실패 - 수동 입력 필요)"
+  }
+]
